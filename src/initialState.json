@@ -1,28 +1,36 @@
 {
-	"allSkiDays": [
+	"allWorkOuts": [
 		{
-			"resort": "Kirkwood",
-			"date": "2016-12-7",
-			"powder": true,
-			"backcountry": false
+			"workout": "Arms & Core",
+			"date": "2017-03-14",
+			"gym": true,
+			"solo": true
 		},
 		{
-			"resort": "Squaw Valley",
-			"date": "2016-12-8",
-			"powder": false,
-			"backcountry": false
+			"workout": "Yoga",
+			"date": "2017-03-19",
+			"gym": false,
+			"solo": true
 		},
 		{
-			"resort": "Mt Tallac",
-			"date": "2016-12-9",
-			"powder": false,
-			"backcountry": true
+			"workout": "Legs & Core",
+			"date": "2017-03-20",
+			"gym": true,
+			"solo": false
 		}
 	],
 	"goal": 10,
 	"errors": [],
-	"resortNames": {
+	"workoutNames": {
 		"fetching": false,
-		"suggestions": ["Squaw Valley", "Snowbird", "Stowe", "Steamboat"]
+		"suggestions": [
+			"Running",
+		  "Yoga",
+		  "Arms & Core",
+		  "Legs & Core",
+		  "Pilates",
+		  "Dance",
+		  "Spinning"
+		]
 	}
 }

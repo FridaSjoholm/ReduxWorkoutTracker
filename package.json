@@ -12,12 +12,7 @@
     "url": "git+https://github.com/MoonTahoe/ski-day-counter-redux.git"
   },
   "keywords": [
-    "activity",
-    "counter",
-    "ski",
-    "day",
-    "tutorial",
-    "redux"
+
   ],
   "author": "Alex Banks <alex@moonhighway.com> (http://www.moonhighway.com)",
   "license": "MIT",

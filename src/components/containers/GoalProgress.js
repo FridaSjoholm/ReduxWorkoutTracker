@@ -2,9 +2,9 @@ import GoalProgress from '../ui/GoalProgress'
 import { connect } from 'react-redux'
 import { setGoal } from '../../actions'
 
-const mapStateToProps = state => 
+const mapStateToProps = state =>
 	({
-		current: state.allSkiDays.length,
+		current: state.allWorkOuts.length,
 		goal: state.goal
 	})
 

@@ -1,26 +1,26 @@
 import AddDayForm from '../ui/AddDayForm'
 import { withRouter } from 'react-router'
 import { connect } from 'react-redux'
-import { addDay, suggestResortNames, clearSuggestions } from '../../actions'
+import { addDay, suggestWorkOutNames, clearSuggestions } from '../../actions'
 
-const mapStateToProps = (state, props) => 
+const mapStateToProps = (state, props) =>
 	({
-		suggestions: state.resortNames.suggestions,
-		fetching: state.resortNames.fetching,
+		suggestions: state.workOutNames.suggestions,
+		fetching: state.workOutNames.fetching,
 		router: props.router
 	})
 
-const mapDispatchToProps = dispatch => 
+const mapDispatchToProps = dispatch =>
 	({
-		onNewDay({resort,date,powder,backcountry}) {
+		onNewDay({workout,date,gym,solo}) {
 			dispatch(
-				addDay(resort, date, powder, backcountry)
+				addDay(workout, date, gym, solo)
 			)
 		},
 		onChange(value) {
 			if (value) {
 				dispatch(
-					suggestResortNames(value)
+					suggestWorkoutNames(value)
 				)
 			} else {
 				dispatch(
@@ -33,10 +33,8 @@ const mapDispatchToProps = dispatch =>
 				clearSuggestions()
 			)
 		}
-	})	
+	})
 
-const Container = connect(mapStateToProps, mapDispatchToProps)(AddDayForm)	
+const Container = connect(mapStateToProps, mapDispatchToProps)(AddDayForm)
 
 export default withRouter(Container)
-
-

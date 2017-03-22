@@ -21,7 +21,7 @@
 	],
 	"goal": 10,
 	"errors": [],
-	"workoutNames": {
+	"workOutNames": {
 		"fetching": false,
 		"suggestions": [
 			"Running",

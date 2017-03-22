@@ -11,7 +11,7 @@ const initialState = (localStorage["redux-store"]) ?
     JSON.parse(localStorage["redux-store"]) :
     sampleData
 
-const saveState = () => 
+const saveState = () =>
     localStorage["redux-store"] = JSON.stringify(store.getState())
 
 const handleError = error => {

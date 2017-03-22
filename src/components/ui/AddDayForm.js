@@ -32,7 +32,7 @@ const AddDayForm = ({ suggestions=[], onNewDay=f=>f, onChange=f=>f, onClear=f=>f
     return (
         <form onSubmit={submit} className="add-day">
 
-            <label htmlFor="date">workout Name</label>
+            <label htmlFor="date">Workout Name</label>
 
             <Autocomplete ref={input => _workout = input}
                           suggestions={suggestions}

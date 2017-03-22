@@ -20,7 +20,7 @@ const mapDispatchToProps = dispatch =>
 		onChange(value) {
 			if (value) {
 				dispatch(
-					suggestWorkoutNames(value)
+					suggestWorkOutNames(value)
 				)
 			} else {
 				dispatch(

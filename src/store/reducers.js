@@ -89,7 +89,7 @@ export default combineReducers({
   allWorkOuts,
   goal,
   errors,
-  resortNames: combineReducers({
+  workOutNames: combineReducers({
     fetching,
     suggestions
   })

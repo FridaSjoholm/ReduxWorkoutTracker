@@ -4,39 +4,39 @@ import '../../stylesheets/AddDayForm.scss'
 
 const AddDayForm = ({ suggestions=[], onNewDay=f=>f, onChange=f=>f, onClear=f=>f, fetching=false, router}) => {
 
-    let _resort, _date, _powder, _backcountry
+    let _workout, _date, _gym, _solo
 
     const submit = e => {
         e.preventDefault()
         onNewDay({
-            resort: _resort.value,
+            workout: _workout.value,
             date: _date.value.toString(),
-            powder: _powder.checked,
-            backcountry: _backcountry.checked
+            gym: _gym.checked,
+            solo: _solo.checked
         })
 
 
-        const addAnother = confirm(`${_resort.value} on ${_date.value.toString()} added. Add another?`)
+        const addAnother = confirm(`${_workout.value} on ${_date.value.toString()} added. Add another?`)
 
         if (!addAnother) {
             router.push('/')
         }
 
-        _resort.value = ''
+        _workout.value = ''
         _date.value = ''
-        _powder.checked = false
-        _backcountry.checked = false
+        _gym.checked = false
+        _solo.checked = false
 
     }
 
     return (
         <form onSubmit={submit} className="add-day">
 
-            <label htmlFor="date">Resort Name</label>
+            <label htmlFor="date">Workout Name</label>
 
-            <Autocomplete ref={input => _resort = input}
+            <Autocomplete ref={input => _workout = input}
                           suggestions={suggestions}
-                          onChange={() => onChange(_resort.value)}
+                          onChange={() => onChange(_workout.value)}
                           fetching={fetching}
                           onClear={onClear}
             />
@@ -48,17 +48,17 @@ const AddDayForm = ({ suggestions=[], onNewDay=f=>f, onChange=f=>f, onClear=f=>f
                    required/>
 
             <div>
-                <input id="powder-day"
-                       ref={input => _powder = input}
+                <input id="gym-day"
+                       ref={input => _gym = input}
                        type="checkbox"/>
-                <label htmlFor="powder-day">Powder</label>
+                <label htmlFor="gym-day">Gym</label>
             </div>
 
             <div>
-                <input id="backcountry-day"
-                       ref={input => _backcountry = input}
+                <input id="solo-day"
+                       ref={input => _solo = input}
                        type="checkbox"/>
-                <label htmlFor="backcountry-day">Backcountry</label>
+                <label htmlFor="solo-day">Solo</label>
             </div>
 
             <button>Add Day</button>

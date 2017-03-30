@@ -9,7 +9,6 @@ div.goal-progress {
   bottom: 3em;
   display: flex;
   align-items: center;
-  font-family: verdana;
   justify-content: space-between;
   text-shadow: 2px 2px 10px $snow-white;
 
@@ -38,7 +37,7 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: #8a2a2d;
+  background-color: #3dd3c9;
 }
 
 @-moz-document url-prefix() {

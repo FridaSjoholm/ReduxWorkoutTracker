@@ -8,17 +8,17 @@ const consoleMessages = store => next => action => {
 	let result
 
 	console.groupCollapsed(`dispatching action => ${action.type}`)
-	console.log('ski days', store.getState().allSkiDays.length)
+	console.log('Workouts', store.getState().allWorkOuts.length)
 	result = next(action)
 
-	let { allSkiDays, goal, errors, resortNames } = store.getState()
+	let { allWorkOuts, goal, errors, workOutNames } = store.getState()
 
 	console.log(`
 
-		ski days: ${allSkiDays.length}
+		workouts: ${allWorkOuts.length}
 		goal: ${goal}
-		fetching: ${resortNames.fetching}
-		suggestions: ${resortNames.suggestions}
+		fetching: ${workOutNames.fetching}
+		suggestions: ${workOutNames.suggestions}
 		errors: ${errors.length}
 
 	`)
@@ -32,6 +32,3 @@ const consoleMessages = store => next => action => {
 export default (initialState={}) => {
 	return applyMiddleware(thunk,consoleMessages)(createStore)(appReducer, initialState)
 }
-
-
-

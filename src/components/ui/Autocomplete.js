@@ -20,7 +20,7 @@ class Autocomplete extends Component {
 
                 <input ref="searchTerm"
                        type="text"
-                       placeholder="mountain or resort..."
+                       placeholder="type of workout"
                        onChange={onChange}
                        onFocus={onChange}
                        onBlur={() => setTimeout(onClear, 250)}

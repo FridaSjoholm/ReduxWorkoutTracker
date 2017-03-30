@@ -1,6 +1,6 @@
 @import "globals";
 
-div.ski-day-list {
+div.work-out-list {
 
   height: calc(100% - 13em);
   overflow-y: scroll;
@@ -13,7 +13,6 @@ div.ski-day-list {
     }
     width: 100%;
     background-color: rgba(255,255,255, .9);
-    font-family: verdana, sans-serif;
     font-size: 1.5em;
     text-align: center;
 
